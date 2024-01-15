@@ -70,25 +70,6 @@ class Queue {
 	clear() {
 		this.items.splice(0, this.items.length);
 	}
-    enqueue(element) {
-        this.elements[this.end] = element;
-        this.end++;
-    }
-    dequeue() {
-        const item = this.elements[this.start];
-        delete this.elements[this.start];
-        this.start++;
-        return item;
-    }
-    peek() {
-        return this.elements[this.start];
-    }
-    get length() {
-        return this.end - this.start;
-    }
-    get isEmpty() {
-        return this.length === 0;
-    }
 }
 
 module.exports = {
